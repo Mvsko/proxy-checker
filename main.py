@@ -32,7 +32,9 @@ for i in range(int(proxynumber)):
     nmb = i+1
     proxyqst = input("[" + str(nmb) + "]" + " Insérer le proxy à vérifier (ip:port): ")
     proxyList.append(proxyqst)
+
 print()
+
 def proxycheck(pip):    
     try:        
         proxy_handler = urllib.request.ProxyHandler({'http': pip})        
@@ -54,4 +56,5 @@ for proxy in proxyList:
         print (">> [" + proxy + "]", timenow , "- Ce proxy ne fonctionne pas ou est inexistant.")
     else:
         print (">> [" + proxy + "]", timenow , "- Ce proxy est actuellement fonctionnel")
+        
 time.sleep(4)
